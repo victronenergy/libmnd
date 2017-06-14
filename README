@@ -1,1 +1,30 @@
-# libmnd
+Binary repository for the Marine Network Data library & two demonstration command-line utilites
+that utilise the library.
+
+The source code for the utilities can be found at: https://github.com/malcolmh/mnd
+
+Installation:
+1. Library: move the libmnd.so.* file as libmnd.so to a directory on your LD_LIBRARY_PATH
+2. Utilites move the mnd*.* files as mnd* to a directory on your PATH
+
+Usage:
+
+mndd com|can|ngt [device [speed]]
+  Default Input from stdin, Output to stdout
+  Default decoding is N0183
+  com: N0183 input from com port (ASCII data)
+    (if no device, input from text file/pipe on stdin)
+  ngt: N2000 input from Actisense NGT-1 (Byte aligned binary data)
+    (if no device, input from actisense-serial log file/pipe on stdin)
+  can: N2000 input from SocketCAN (Byte aligned binary data)
+    (if no device, input from candump log file/pipe on stdin)
+
+mnde
+  Data format: [SA>DA,] <PGN>, <parameter>, <parameter>, ...
+    Optional SA>DA pair. <PGN> must be an integer
+    <parameter> fields can be numbers or quoted strings
+    The values "-", "n/a" & "error" can be used for integer fields
+    Blank fields can be used for unavailable or reserved values
+    Lines beginning with '#' are comments and echoed to output
+    Dates should be integers in the form: YYYYMMDD
+    Times should be integers in the form: HHMMSS
