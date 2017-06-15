@@ -1,5 +1,2 @@
 *.o
 *.so
-.settings
-.cproject
-.project
