@@ -29,9 +29,8 @@ ISO Request - PGN: 59904, Priority: 6, DST: 1, SRC: 1
 ISO Address Claim - PGN: 60928, Priority: 6, DST: 255, SRC: 1
     Unique number: 0   Manufacturer: Victron Energy  ECU instance: 0  Function instance: 0
     Function code: 130  Device class: 120  Generic instance: 0  Industry group: Marine
-ISO Request - PGN: 59904, Priority: 6, DST: 1, SRC: 1
-    PGN: 60928
 
+------------------------------------------------------------------------------------------
 
 mnde
   Data format: [SA>DA,] <PGN>, <parameter>, <parameter>, ...
