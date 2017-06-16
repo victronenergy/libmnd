@@ -7,7 +7,7 @@ The source code for the utilities can be found at: https://github.com/malcolmh/m
 Installation:
 1. Library: move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
 2. Utilites move the bin/mnd*.* files renamed as mnd* to a directory on your PATH
-3. Developers will also need to copy the inc/mnd directory a directory on your C_INCLUDE_PATH
+3. Developers will also need to copy the inc/mnd subdirectory to a directory on your C_INCLUDE_PATH
 
 Usage:
 
