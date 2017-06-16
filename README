@@ -1,11 +1,13 @@
+
 Binary repository for the Marine Network Data library & two demonstration command-line utilites
 that utilise the library.
 
 The source code for the utilities can be found at: https://github.com/malcolmh/mnd
 
 Installation:
-1. Library: move the libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
-2. Utilites move the mnd*.* files renamed as mnd* to a directory on your PATH
+1. Library: move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
+2. Utilites move the bin/mnd*.* files renamed as mnd* to a directory on your PATH
+3. Developers will also need to copy the inc/mnd directory a directory on your C_INCLUDE_PATH
 
 Usage:
 
