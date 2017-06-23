@@ -1,61 +1,6 @@
+Binary repository for the Marine Network Data library
 
-Binary repository for the Marine Network Data library & two demonstration command-line utilites
-that utilise the library.
-
-The source code for the utilities can be found at: https://github.com/malcolmh/mnd
+Demonstation utilities that use this library can be found at: https://github.com/malcolmh/mnd
 
 Installation:
-1. Library: move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
-2. Utilites move the bin/mnd*.* files renamed as mnd* to a directory on your PATH
-3. Developers will also need to copy the inc/mnd subdirectory to a directory on your C_INCLUDE_PATH
-
-Usage:
-
-mndd com|can|ngt [device [speed]]
-  Default Input from stdin, Output to stdout
-  Default decoding is N0183
-  com: N0183 input from com port (ASCII data)
-    (if no device, input from text file/pipe on stdin)
-  ngt: N2000 input from Actisense NGT-1 (Byte aligned binary data)
-    (if no device, input from actisense-serial log file/pipe on stdin)
-  can: N2000 input from SocketCAN (Byte aligned binary data)
-    (if no device, input from candump log file/pipe on stdin)
-
-Example:
-# mndd can can0
-===========================
-Marine Network Data Decoder
-===========================
-ISO Request - PGN: 59904, Priority: 6, DST: 1, SRC: 1
-    PGN: 60928
-ISO Address Claim - PGN: 60928, Priority: 6, DST: 255, SRC: 1
-    Unique number: 0   Manufacturer: Victron Energy  ECU instance: 0  Function instance: 0
-    Function code: 130  Device class: 120  Generic instance: 0  Industry group: Marine
-
-------------------------------------------------------------------------------------------
-
-mnde
-  Data format: [SA>DA,] <PGN>, <parameter>, <parameter>, ...
-    Optional SA>DA pair. <PGN> must be an integer
-    <parameter> fields can be numbers or quoted strings
-    The values "-", "n/a" & "error" can be used for integer fields
-    Blank fields can be used for unavailable or reserved values
-    Lines beginning with '#' are comments and echoed to output
-    Dates should be integers in the form: YYYYMMDD
-    Times should be integers in the form: HHMMSS
-
-Example:
-# mnde
-===========================
-Marine Network Data Encoder
-===========================
-127744 3, 1, 0.1, 24
-Payload bytes:
-  03 01 01 00 18 00 00 00 
-  
-CAN frames:
-  99F30000 [8] 03 01 01 00 18 00 00 00 
-Check decode:
-AC Power/Current - Phase A - PGN: 127744, Priority: 6, DST: 255, SRC: 0
-    SID: 3  Connection: 1  AC current: 0.10A  Power: 24W
-
+Move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
