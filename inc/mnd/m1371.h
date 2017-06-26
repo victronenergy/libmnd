@@ -17,7 +17,21 @@
 
 typedef enum { MESG, ATON, NSTS, TYPE } MLU;
 
+// Function to convert M.1371 encapsulated data to text.
+
 extern char* translateM1371(uint8_t encData[], int encLen, int pad);
+
+// encData is encapsulated data array
+// encLen is number of valis bytes in encData
+// pad is number of padding bytes
+// Return value: pointer to conversion string
+
+// Function to access M.1371 lookup tables.
+
 extern char* lookupM1371(int val, MLU tab);
+
+// val is enumeration value
+// tab table to be used
+// Return value: pointer to conversion string
 
 #endif /* m1371_h */
