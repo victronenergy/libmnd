@@ -3,4 +3,6 @@ Binary repository for the Marine Network Data library
 Demonstation utilities that use this library can be found at: https://github.com/malcolmh/mnd
 
 Installation:
-Move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
+1. Move the lib/libmnd.so.* file renamed as libmnd.so to a directory on your LD_LIBRARY_PATH
+2. Developers will also need to copy the inc/mnd subdirectory to a directory on your C_INCLUDE_PATH
+
