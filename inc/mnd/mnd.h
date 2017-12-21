@@ -12,9 +12,9 @@
 #ifndef mnd_h
 #define mnd_h
 
-#include "n0183.h"  // Includes for NMEA.0183 functions
-#include "m1371.h"  // Includes for ITU M.1371 functions
-#include "n2000.h"  // Includes for NMEA.2000 decoding functions
-#include "e2000.h"  // Includes for NMEA.2000 encoding functions
+#include "n0183.h"
+#include "m1371.h"
+#include "n2000.h"
+#include "e2000.h"
 
 #endif /* mnd_h */

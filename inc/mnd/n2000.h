@@ -56,30 +56,8 @@ typedef struct {
   uint8_t dat[8];       // Frame bytes
 } S_2000;               // SocketCAN frame
 
-// Function to concatenate data bytes in SocketCAN frames
-
 extern int deframeN2000(S_2000* frame, E_2000* enc);
-
-// frame is input SocketCAN frame
-// enc points to buffer reserved for concatenated data
-// Return value: -1 if lost frames detected
-//                0 if waiting for more frames
-//                1 if complete pgn received & data in enc is valid
-
-// Function to extract NMEA.2000 PGN message fields
-
 extern int decodeN2000(E_2000* enc, T_2000 args[]);
-
-// enc is NMEA.2000 message data
-// args points to array of field structures reserved for decoded data
-// Return value: number of valid items in args
-
-// Function to convert NMEA.2000 PGN messages into text
-
 extern char* translateN2000(E_2000* enc, char* d2000);
-
-// enc is NMEA.2000 message data
-// d2000 points to char array reserved for decoded data
-// Return value: points to d2000 if conversion complete, NULL otherwise
 
 #endif /* n2000_h */
