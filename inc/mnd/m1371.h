@@ -12,7 +12,6 @@
 #ifndef m1371_h
 #define m1371_h
 
-#include <unistd.h>
 #include <stdint.h>
 
 typedef enum { MESG, ATON, NSTS, TYPE } MLU;
