@@ -17,5 +17,7 @@
 
 extern char* translateN0183(char* ln, char* d0183);
 extern char* translateTTD(uint8_t* buf, int len, char* trttd);
+extern void decodeN0183(char* ln, MND_PAR args[]);
+extern MND_PAR* encodeN0183(MND_PAR args[], char* ln);
 
 #endif /* n0183_h */

@@ -27,18 +27,6 @@ typedef struct {
   uint8_t msg[250]; // Message bytes
 } E_2000;           // Message contents
 
-typedef enum { M2K_ASC, M2K_UNI, M2K_I64, M2K_F64 } M2K_TYP;
-
-typedef struct {
-  M2K_TYP typ;          // Parameter type
-  union {
-    uint8_t asc[8];     // Ascii
-    uint16_t uni[4];    // Unicode
-    int64_t i64;        // Integer
-    double f64;         // Real
-  }dat;
-} T_2000;               // Encode parameter
-
 typedef struct {
   int pgn;        // PGN
   char* cap;      // Text name
@@ -57,7 +45,9 @@ typedef struct {
 } S_2000;               // SocketCAN frame
 
 extern int deframeN2000(S_2000* frame, E_2000* enc);
-extern int decodeN2000(E_2000* enc, T_2000 args[]);
 extern char* translateN2000(E_2000* enc, char* d2000);
+extern void decodeN2000(E_2000* enc, MND_PAR args[]);
+extern MND_PAR* encodeN2000(MND_PAR args[], E_2000* enc);
+extern int enframeN2000(E_2000* enc, int seq, S_2000 frames[]);
 
 #endif /* n2000_h */
