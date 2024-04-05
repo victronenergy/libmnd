@@ -2,9 +2,9 @@
  ============================================================================
  Name        : n0183.h
  Author      : Malcolm Herring
- Version     : 0.1
+ Version     : 1.0
  Description : Marine Network Data Library
- Copyright   : © 2016 Malcolm Herring.
+ Copyright   : © 2016,2024 Malcolm Herring.
  This file is part of libmnd.
  ============================================================================
  */
